@@ -42,23 +42,6 @@ Model B achieves a **~94.8% improvement** in MAE over the baseline dummy regress
 
 ---
 
-## Project Structure
-
-```
-/
-├── JSON_TO_CSV/            # JSON validation & conversion scripts
-│   └── preprocess.py       # Multi-threaded file checker + JSON → CSV converter
-├── ML/                     # Machine learning scripts
-│   ├── model_a.py          # Random Forest baseline (n_estimators=500)
-│   ├── model_b.py          # Tuned Random Forest (max_depth=15, min_samples etc.)
-│   └── evaluate.py         # Evaluation metrics + visualisation
-├── visualisation/          # Danceability plots
-│   └── plots/              # Output PNGs (line plot + KDE histogram per CSV group)
-└── data/                   # CSV output directory (not tracked — see below)
-```
-
----
-
 ## Dataset
 
 **MediaEval AcousticBrainz Genre** — Bogdanov et al., 2018  
