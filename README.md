@@ -52,8 +52,6 @@ DOI: [10.5281/zenodo.2553414](https://doi.org/10.5281/zenodo.2553414)
 - Audio features extracted using [Essentia](https://essentia.upf.edu/) (tonal, rhythm, lowlevel, metadata)
 - Each track stored as a uniquely referenced JSON (e.g. `53a0bb05-3564-4e52-b28c-ffcc0369dcd8.json`)
 
-> **Note:** The dataset is not included in this repository. Download it from the Zenodo link above and point `DATA` in `preprocess.py` to your local directory.
-
 ---
 
 ## Pipeline
