@@ -56,20 +56,8 @@ DOI: [10.5281/zenodo.2553414](https://doi.org/10.5281/zenodo.2553414)
 
 ## Pipeline
 
-### 1. Preprocessing
 
-```python
-# Set your local dataset path
-DATA = r"path/to/acousticbrainz-mediaeval-train"
-THREADS = 16
-```
-
-- Recursively walks directories (`4a–4f`, `40–49`, `5a–5f`, `50–59`)
-- Validates files by reading the first 1024 bytes
-- Converts valid JSON files to flat CSVs using a fixed header scheme
-- Missing values handled via `item.get(k, None)` — excluded rather than imputed
-
-### 2. ML Features Used
+### 1. ML Features Used
 
 ```python
 FEATURES = {
@@ -84,7 +72,7 @@ TARGET_FEATURE = "bpm"
 
 All features are drawn from Essentia's `rhythm` analysis profile, keeping feature correlation high and improving prediction accuracy.
 
-### 3. Model
+### 2. Model
 
 **Random Forest Regressor** (scikit-learn) — chosen for its non-linear handling of musical features, resistance to outliers, and scalability with high-dimensional data.
 
